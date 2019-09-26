@@ -1,0 +1,16 @@
+directories:
+  .
+
+test_sources:
+  src/test/java
+
+derive_targets_from_directories: true
+
+targets:
+  # If source code isn't resolving, add additional targets that compile it here
+
+build_flags:
+  --javabase=@bazel_tools//tools/jdk:remote_jdk11
+  --java_toolchain=@bazel_tools//tools/jdk:toolchain_java11
+
+java_language_level: 11
